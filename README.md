@@ -1,5 +1,23 @@
-# Liquid Glass Web
+# 液态玻璃画布
 
-Open `index.html` in a browser to use the editor. The background image, its embedded data copy, and `hyalite.js` are included for local use.
+一个直接在浏览器中使用的单页编辑器：上传图片背景，在画布上放置多个液态玻璃框，并调整字符、折射和边框光晕，适合录制动态背景画面。
 
-The Hyalite component is distributed under the included [license](HYALITE-LICENSE).
+## 打开方式
+
+打开仓库根目录的 `index.html` 即可使用，无需安装依赖或运行构建命令。推荐使用较新的 Chrome 或 Edge 浏览器。
+
+## 使用步骤
+
+1. 在「背景图片」上传图片。图片会居中铺满当前画布；代码字符根据图片明暗显示在浅色区域，并在深色区域边界裁切。上传的图片只在当前浏览器页面中读取，不会传到服务器。
+2. 在「画面尺寸与排版」选择尺寸：1080 × 2356、1080 × 1920、1080 × 1350、1080 × 1080 或 1920 × 1080。添加圆角框或圆形框；选中某个框后拖动、调节大小，或直接输入位置。玻璃框可以放到画布边界之外。
+3. 选中玻璃框后，在「玻璃材质」和「边框发光」中单独调整它的参数。可在列表中重新选中、居中或删除指定玻璃框。
+4. 在「代码字符」中调整字符颜色、密度、大小、亮度和变化速度。字符会随时间变化；框下字符可单独设置模糊程度。
+5. 点击「隐藏控件录制」，用录屏软件录制画布。页面目前不直接导出视频。
+
+快捷键：`Ctrl/⌘ + Z` 撤销，`H` 显示或隐藏控件，`空格` 暂停或继续动画。刷新页面会恢复默认设置；请在刷新前完成录制。
+
+## 文件
+
+- `index.html`：页面、样式与交互逻辑
+- `background.jpg` / `background-data.js`：默认背景及供本地文件模式读取的内嵌副本
+- `hyalite.js`：玻璃折射效果；原项目许可见 [HYALITE-LICENSE](HYALITE-LICENSE)
